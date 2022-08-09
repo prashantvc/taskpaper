@@ -3,23 +3,22 @@ import { Range, TextEditor, TextEditorDecorationType } from "vscode";
 import { TodoDocument, Task } from "./TodoDocument";
 
 export default class TodoDocumentEditor {
-  public performDecoration(delayed?: boolean) {}
-  doPerform() {
-    var todoDocument = new TodoDocument(this._textEditor.document);
-  }
-  constructor(private _textEditor: TextEditor) {}
-  private timeout: number = null;
+    public performDecoration(delayed?: boolean) {}
+    doPerform() {
+        var todoDocument = new TodoDocument(this._textEditor.document);
+    }
+    constructor(private _textEditor: TextEditor) {}
 }
 
 class TaskDecorator {
-  public getDecorationTypes(tasks: Task[]): DecorationTypeWithRanges[] {
-    var result: DecorationTypeWithRanges[] = [];
-    //result = result.concat(new )
-    return result;
-  }
+    public getDecorationTypes(tasks: Task[]): DecorationTypeWithRanges[] {
+        var result: DecorationTypeWithRanges[] = [];
+        //result = result.concat(new )
+        return result;
+    }
 }
 
 interface DecorationTypeWithRanges {
-  decorationType: TextEditorDecorationType;
-  ranges: Range[];
+    decorationType: TextEditorDecorationType;
+    ranges: Range[];
 }
